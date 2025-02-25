@@ -44,7 +44,7 @@ class HttpVlcHandler(HttpHandler):
         try:
             response = requests.get(url, params=params, auth=(self.username, self.password))
             if response.status_code == 200:
-                logger.info(f"Action '{action}' executed by VLC.")
+                logger.info(f"Action [{action}] executed by VLC.")
             else:
                 logger.error(f"HTTP Request error: {response.status_code}")
 

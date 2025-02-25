@@ -17,4 +17,4 @@ logging.basicConfig(
 )
 
 # Crear el logger
-logger = logging.getLogger("pyOSCWinServ")  # Nombre del logger
+logger = logging.getLogger(__name__)
