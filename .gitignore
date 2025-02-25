@@ -1,0 +1,49 @@
+# Ignorar el archivo de credenciales
+.env
+.secrets
+
+# Ignorar archivos de entorno virtual
+venv/
+env/
+.venv/
+ENV/
+
+# Ignorar archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar archivos de distribución y build
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+
+# Ignorar archivos de logs
+*.log
+logs/
+
+# Ignorar archivos de base de datos (si usas alguna)
+*.db
+*.sqlite3
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de Jupyter Notebook
+.ipynb_checkpoints/
+
+# Ignorar archivos de testing (si usas pytest)
+.pytest_cache/
+
+# Ignorar archivos de cobertura (si usas coverage)
+.coverage
+htmlcov/
+
+# Ignorar archivos de mypy (si usas mypy)
+.mypy_cache/
+
+# Ignorar archivos de Sphinx (si usas Sphinx)
+docs/_build/
