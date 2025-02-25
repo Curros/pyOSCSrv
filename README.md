@@ -77,7 +77,10 @@ Before running the project, ensure you have the following installed:
 
 ## Proyect structure
 
-    your-repo-name/
+    pyOSCSrv/
+    ├── .vscode/                    # VS Code configuration folder
+    │   ├── launch.json             # Configuration for the debugger
+    │   ├── settings.json           # Several configs
     ├── handlers/                   # OSC message handlers
     │   ├── base_handler.py         # Base handler class
     │   ├── exec_handler.py         # Handler for exec commands
@@ -105,7 +108,7 @@ Contributions are more than welcome! If you'd like to contribute in any way, ple
 As I'm just starting with python, some nice comments with the pull request will be nice.
 
 ## License
-This project is licensed under the MIT License. (Pending to add latter! y don't care about that much now!)
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
