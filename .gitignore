@@ -47,6 +47,3 @@ htmlcov/
 
 # Ignorar archivos de Sphinx (si usas Sphinx)
 docs/_build/
-
-# Ignore testing script
-run.ps1

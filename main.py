@@ -5,14 +5,14 @@ import os
 
 def handle_msg(address, *args):
     """ Gets called when a mesage is received by the OSC Server"""
-    logger.info(f"Message received {address}: {args}")
+    logger.info(f"Message received [{address}] {args}")
 
     handler = HandlerFactory.get_handler(address)
     
     if handler:
         handler.handle(address, *args)
     else:
-        logger.warning(f"Message without handler: {address} {args}")
+        logger.warning(f"Message without handler [{address}] {args}")
 
 def startServer():
     """ Config and execute the OSC Server """

@@ -93,8 +93,9 @@ Before running the project, ensure you have the following installed:
     ├── handler_factory.py          # Factory to know wich handler is the best
     ├── logger.py                   # Logger configuration
     ├── main.py                     # Main script to start the OSC server
+    ├── README.md                   # This file
     ├── requirements.txt            # List of dependencies
-    └── README.md                   # This file
+    └── run.ps1                     # Easy script tu run the server
 
 ## Contributing
 Contributions are more than welcome! If you'd like to contribute in any way, please follow these steps:
