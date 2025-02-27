@@ -3,16 +3,17 @@ from handler_factory import HandlerFactory
 from logger import logger
 import os
 
-def handle_msg(address, *args):
+def handle_msg(client_address, address, *args):
     """ Gets called when a mesage is received by the OSC Server"""
-    logger.info(f"Message received [{address}] {args}")
+    caller_ip = f"{client_address[0]}:{client_address[1]}"
+    logger.info(f"Message received [{caller_ip}] '{address}' {args}")
 
     handler = HandlerFactory.get_handler(address)
     
     if handler:
         handler.handle(address, *args)
     else:
-        logger.warning(f"Message without handler [{address}] {args}")
+        logger.warning(f"Message without handler [{caller_ip}] '{address}' {args}")
 
 def startServer():
     """ Config and execute the OSC Server """
@@ -22,7 +23,7 @@ def startServer():
 
     # Dispatcher configuration to assign halders for the msgs
     disp = dispatcher.Dispatcher()
-    disp.set_default_handler(handle_msg)
+    disp.set_default_handler(handle_msg, True)
 
     # Server start
     server = osc_server.ThreadingOSCUDPServer((ip, port), disp)

@@ -3,4 +3,4 @@ from logger import logger
 
 class PingHandler(BaseHandler):
     def handle(self, address, *args):
-        logger.info("Ping received, returning a pong...")
+        logger.info("Ping received, printing a pong...")
