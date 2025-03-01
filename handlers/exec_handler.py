@@ -1,7 +1,7 @@
 # handlers/exec_handler.py
 import subprocess
 from handlers.base_handler import BaseHandler
-from logger import logger
+from logger import log
 
 class ExecHandler(BaseHandler):
     def handle(self, address, *args):
@@ -9,11 +9,11 @@ class ExecHandler(BaseHandler):
         if args:
             last_arg = args[-1]  # Save the last argument
             args = args[:-1]  # Delete last argument
-            logger.debug(f"Last Arg: {last_arg}")
-            logger.debug(f"Cleaned Args: {args}")
+            log.debug(f"Last Arg: {last_arg}")
+            log.debug(f"Cleaned Args: {args}")
 
         if not args:
-            logger.warning("No arguments provided.")
+            log.warning("No arguments provided.")
             return # No action executed.
 
         try:
@@ -27,8 +27,8 @@ class ExecHandler(BaseHandler):
                 subprocess.run([app, *map(str, params)], shell=True, check=True)
 
             else:
-                logger.warning("No proper param provided.")
+                log.warning("No proper param provided.")
                 return
         
         except Exception as e:
-            logger.error(f"Error executing {address}: {e}")
+            log.error(f"Error executing {address}: {e}")

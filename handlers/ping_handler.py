@@ -1,6 +1,6 @@
 from handlers.base_handler import BaseHandler
-from logger import logger
+from logger import log
 
 class PingHandler(BaseHandler):
     def handle(self, address, *args):
-        logger.info("Ping received, printing a pong...")
+        log.info("Ping received, printing a pong...")

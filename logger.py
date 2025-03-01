@@ -1,8 +1,8 @@
 import logging
-import os
+from config import get_config
 
 # Get the log lvl from the .vscode/launch.json
-log_level = os.getenv("LOG_LEVEL", "INFO").upper()
+log_level = get_config("server_log_level").upper()
 
 # Check if the value is valid.
 valid_levels = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
@@ -17,4 +17,4 @@ logging.basicConfig(
 )
 
 # Crear el logger
-logger = logging.getLogger(__name__)
+log = logging.getLogger(__name__)
