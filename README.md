@@ -48,7 +48,7 @@ Before running the project, ensure you have the following installed:
 
 4. **Set up environment variables:**
 
-    Create a `.env` file in the root directory with the following content:
+    Rename the `.env.example` file in the root directory and fill the following content replacing the values:
     ```
     VLC_USERNAME=your_vlc_username
     VLC_PASSWORD=your_vlc_password
