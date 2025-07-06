@@ -9,9 +9,9 @@ DEFAULT_CONFIG = {
     "server_ip": "0.0.0.0",
     "server_port": 8002,
     "server_log_level": "info",
-    "vlc_username": "",
-    "vlc_password": "pass",
-    "vlc_server_address": "http://localhost:8080"
+    "vlc_server_address": "http://localhost:8080",
+    "spotify_redirect_uri":"http://127.0.0.1:8888/callback",
+    "spotify_scope":"user-read-playback-state user-modify-playback-state"
 }
 
 

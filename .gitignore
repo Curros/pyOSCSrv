@@ -12,6 +12,7 @@ ENV/
 __pycache__/
 *.py[cod]
 *$py.class
+.cache
 
 # Ignorar archivos de distribución y build
 dist/

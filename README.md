@@ -4,7 +4,7 @@ This project is an OSC ([Open Sound Control](https://opensoundcontrol.stanford.e
 
 I'm using it to have an intelligent **Controller** while playing some simulation games, but the sky is the limit.
 
-I start using it to have some kind of radio for driving, and once you see how well this is, well I will probably will be adding more and more functionality!
+I start using it to have some kind of radio for driving, so I will probably will be adding more and more functionality!
 
 ## Features
 - Listens for OSC messages on a specified port.
@@ -13,6 +13,7 @@ I start using it to have some kind of radio for driving, and once you see how we
 - Secure handling of credentials using environment variables.
 - Handles different OSC addresses to control VLC (e.g., play, pause, volume).
 - Easy way to run/load/execute .exe programs, for ex Steam games.
+- Handle Spotify actions, so you can control a spotify account directly.
 - Fearly easy way to debug.
 - Nice logging to see if something is not ok.
 
@@ -26,6 +27,7 @@ Before running the project, ensure you have the following installed:
 - ~~[poetry](https://github.com/python-poetry/poetry) to manage the dependencies.~~ (hopefully soon!)
 - (Optional) [VS Code](https://code.visualstudio.com/).
 - (Optional) [VLC Media Player](https://www.videolan.org/) with the [Lua HTTP](https://code.videolan.org/videolan/vlc/-/blob/master/share/lua/README.txt) interface enabled.
+- Developer account from Spotify, you will need to register an app, and get the credentials.
 
 ## Installation / Debug
 
@@ -87,6 +89,7 @@ Before running the project, ensure you have the following installed:
     │   ├── http_handler.py         # Handler for HTTP requests
     │   ├── http_vlc_handler.py     # Handler for VLC-specific commands
     │   ├── ping_handler.py         # Handler to know if the server is alive
+    │   ├── spotify_handler.py      # Handler to send Spotify commands
     │   ├── taskkill_handler.py     # Handler to kill a know process
     ├── .gitignore                  # Files to ignore in Git
     ├── .env.example                # Example environment variables file
