@@ -39,7 +39,7 @@ def get_config(key):
         save_config()                       # Save key
         return DEFAULT_CONFIG[key]
 
-    raise KeyError((f"Configutation key '{key}' not found."))
+    raise KeyError((f"Configuration key '{key}' not found."))
 
 
 def save_config():
