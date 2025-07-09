@@ -1,7 +1,7 @@
 # Verificar si el entorno virtual está activado
 if (-not $env:VIRTUAL_ENV) {
     Write-Host "Loading virtual environment..."
-    .\venv\Scripts\Activate.ps1
+    .\.venv\Scripts\Activate.ps1
 } else {
     Write-Host "Virtual environment ready."
 }

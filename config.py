@@ -1,5 +1,6 @@
 import os
 import json
+from dotenv import load_dotenv
 
 # Configuration path
 CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
@@ -24,6 +25,8 @@ if os.path.exists(CONFIG_PATH):
 else:
     CONFIG = {}
 
+
+load_dotenv()
 
 # Allow calling config in any place
 def get_config(key):
